@@ -70,17 +70,49 @@
 			isa = PBXGroup;
 			children = (
 				0F8A64D52110979A000CD908 /* AppDelegate.swift */,
+				0FB405F12118B77800FE1288 /* Controller */,
+				0FB405F22118B78300FE1288 /* Model */,
+				0FB405F42118B7D800FE1288 /* Views */,
+				0FB405F32118B7B100FE1288 /* Supporting Files */,
+			);
+			path = UIFrameworkExamples;
+			sourceTree = "<group>";
+		};
+		0FB405F12118B77800FE1288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				0F8A64D72110979A000CD908 /* ViewController.swift */,
 				0FA636172114A35700CE0E1F /* LogInViewController.swift */,
 				0FA636192114A39600CE0E1F /* RegisterViewController.swift */,
-				0F8A64D92110979A000CD908 /* Main.storyboard */,
-				0FB405EE2118952800FE1288 /* nygov-logo-share.png */,
-				0F8A64DC2110979C000CD908 /* Assets.xcassets */,
-				0F8A64DE2110979C000CD908 /* LaunchScreen.storyboard */,
-				0F8A64E12110979C000CD908 /* Info.plist */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FB405F22118B78300FE1288 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				0F42B000211494A80064B6D6 /* Lawyer.swift */,
 			);
-			path = UIFrameworkExamples;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FB405F32118B7B100FE1288 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F8A64DC2110979C000CD908 /* Assets.xcassets */,
+				0F8A64E12110979C000CD908 /* Info.plist */,
+				0F8A64DE2110979C000CD908 /* LaunchScreen.storyboard */,
+				0FB405EE2118952800FE1288 /* nygov-logo-share.png */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FB405F42118B7D800FE1288 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F8A64D92110979A000CD908 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2455574F70C590456EDA12B9 /* Pods */ = {

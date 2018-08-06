@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  LogInViewController.swift
 //  UIFrameworkExamples
 //
 //  Created by Jean Cabral on 8/3/18.
@@ -10,33 +10,28 @@ import UIKit
 import ChameleonFramework
 import SkyFloatingLabelTextField
 
-class RegisterViewController: ViewController {
+class LogInViewController: ViewController {
+
+    //MARK: 
+    let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]
     
-     let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]
-    
-    @IBAction func registerButton(_ sender: UIButton) {
-    }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: colors)
-        
-        let emailTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 60, width: 200, height: 30))
-        let passwordTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y:90 , width: 200, height: 30))
-        //let streetAddressTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: <#T##Double#>, width: <#T##Double#>, height: <#T##Double#>))
-        //let cityTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: <#T##Double#>, width: <#T##Double#>, height: <#T##Double#>))
-        //let stateTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: <#T##Double#>, width: <#T##Double#>, height: <#T##Double#>))
-        
-        emailTextField.placeholder = "Email"
-        emailTextField.title = "Enter Your Email"
-        emailTextField.tintColor = UIColor.flatLime()
+        let mailTextField = SkyFloatingLabelTextField(frame: CGRect(x: 100, y: 45, width: 200, height: 45))
+        let passwordTextField = SkyFloatingLabelTextField(frame: CGRect(x: 100, y: 90, width: 200, height: 45))
+        mailTextField.placeholder = "Email"
+        mailTextField.title = "Enter Your Email "
+        mailTextField.tintColor = UIColor.flatLime()
         passwordTextField.placeholder = "Password"
         passwordTextField.title = "Enter Your Password"
         passwordTextField.isSecureTextEntry = true
+        mailTextField.lineHeight = 0
+        mailTextField.selectedLineHeight = 0
         self.view.addSubview(passwordTextField)
-        self.view.addSubview(emailTextField)
-
+        self.view.addSubview(mailTextField)
+        
         // Do any additional setup after loading the view.
     }
 

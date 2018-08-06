@@ -70,13 +70,14 @@
                         <outlet property="imageView" destination="d49-Eo-e7N" id="Oa2-Mg-Rfc"/>
                         <outlet property="logIn" destination="YxL-AZ-kde" id="06E-I0-4iM"/>
                         <outlet property="register" destination="APB-Y0-JzQ" id="lAH-2R-hpL"/>
+                        <segue destination="1NJ-Gb-Owp" kind="show" identifier="goToLawyer" id="T6R-2b-lY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-28" y="20.239880059970016"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Register-->
         <scene sceneID="zpG-PJ-eLf">
             <objects>
                 <viewController storyboardIdentifier="registrationVC" id="IyA-zq-r5u" customClass="RegisterViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,12 +105,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aMj-VU-kqO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Register" id="hOe-tO-uj9"/>
+                    <connections>
+                        <segue destination="1NJ-Gb-Owp" kind="show" identifier="goToLawyer" id="IBr-qi-OeZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgu-Ku-3kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="-520.38980509745136"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Lawyer-->
         <scene sceneID="4bM-GE-7b2">
             <objects>
                 <tableViewController id="1NJ-Gb-Owp" sceneMemberID="viewController">
@@ -118,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YQs-YD-OSu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier=" " id="YQs-YD-OSu">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQs-YD-OSu" id="qfa-yU-qFh">
@@ -132,12 +137,15 @@
                             <outlet property="delegate" destination="1NJ-Gb-Owp" id="ivl-EP-BDN"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Lawyer" id="6yA-Tf-eFL"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erL-Wb-79p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2089" y="-56"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Log In-->
         <scene sceneID="8pt-o9-rad">
             <objects>
                 <viewController storyboardIdentifier="loginVC" id="ttk-ei-Q28" customClass="LogInViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,6 +170,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r3z-Pm-nMS"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log In" id="N8y-pY-78U"/>
+                    <connections>
+                        <segue destination="1NJ-Gb-Owp" kind="show" identifier="goToLawyer" id="Br1-48-ig0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCr-Wy-kUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,10 +200,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFp-y9-HH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-982" y="-2"/>
+            <point key="canvasLocation" x="-985" y="20"/>
         </scene>
     </scenes>
     <resources>
         <image name="nygov-logo-share.png" width="3300" height="2700"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Br1-48-ig0"/>
+    </inferredMetricsTieBreakers>
 </document>

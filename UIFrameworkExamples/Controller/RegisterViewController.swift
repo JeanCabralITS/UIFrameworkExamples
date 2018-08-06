@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 import SkyFloatingLabelTextField
 
-class RegisterViewController: ViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
      let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]
     
@@ -77,12 +77,14 @@ class RegisterViewController: ViewController, UITextFieldDelegate {
                 }
                 else {
                     // The error message will only disappear when we reset it to nil or empty string
-                    floatingLabelTextField.errorMessage = ""
+                    floatingLabelTextField.errorMessage = nil
                 }
             }
         }
         return true
     }
+    
+    
 
     
     override func didReceiveMemoryWarning() {

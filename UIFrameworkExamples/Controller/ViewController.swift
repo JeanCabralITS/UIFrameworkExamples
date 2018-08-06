@@ -17,7 +17,7 @@ import SwiftyJSON
  
 */
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var logIn: UIButton!
@@ -53,7 +53,8 @@ class ViewController: UIViewController {
 
    // GET REQUEST -->
     func getRequest(){
-        guard let lawyerUrl = URL(string: "https://data.ny.gov/resource/cdhq-buk7.json?first_name=YUKI") else { return }
+        guard let lawyerUrl = URL(string: "https://data.ny.gov/resource/cdhq-buk7.json?first_name=YUKI") else { return }// After the question mark u can change the property you are looking for.
+        
         URLSession.shared.dataTask(with: lawyerUrl) { (data, response
             , error) in
             guard let data = data else { return }

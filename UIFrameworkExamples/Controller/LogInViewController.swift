@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 import SkyFloatingLabelTextField
 
-class LogInViewController: ViewController {
+class LogInViewController: UIViewController {
 
     //MARK: 
     let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]

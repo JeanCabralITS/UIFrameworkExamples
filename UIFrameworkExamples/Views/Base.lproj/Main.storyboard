@@ -13,7 +13,7 @@
         <!--NYS Lawyers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="welcomeVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +207,6 @@
         <image name="nygov-logo-share.png" width="3300" height="2700"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Br1-48-ig0"/>
+        <segue reference="T6R-2b-lY2"/>
     </inferredMetricsTieBreakers>
 </document>

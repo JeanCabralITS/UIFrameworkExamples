@@ -16,6 +16,7 @@
 		0FA636182114A35700CE0E1F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA636172114A35700CE0E1F /* LogInViewController.swift */; };
 		0FA6361A2114A39600CE0E1F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA636192114A39600CE0E1F /* RegisterViewController.swift */; };
 		0FB405EF2118952800FE1288 /* nygov-logo-share.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB405EE2118952800FE1288 /* nygov-logo-share.png */; };
+		0FB405F62118B99200FE1288 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB405F52118B99200FE1288 /* Default-568h@2x.png */; };
 		7952BA8FDB6C40CEB87E267A /* Pods_UIFrameworkExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1500788D48BCF82EE178 /* Pods_UIFrameworkExamples.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0FA636172114A35700CE0E1F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0FA636192114A39600CE0E1F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0FB405EE2118952800FE1288 /* nygov-logo-share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nygov-logo-share.png"; sourceTree = "<group>"; };
+		0FB405F52118B99200FE1288 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AEB282B22727611673F639FE /* Pods-UIFrameworkExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFrameworkExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIFrameworkExamples/Pods-UIFrameworkExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		D6CB1500788D48BCF82EE178 /* Pods_UIFrameworkExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIFrameworkExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF034AB31FDFD22A7052F0EF /* Pods-UIFrameworkExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIFrameworkExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIFrameworkExamples/Pods-UIFrameworkExamples.release.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		0F8A64C92110979A000CD908 = {
 			isa = PBXGroup;
 			children = (
+				0FB405F52118B99200FE1288 /* Default-568h@2x.png */,
 				0F8A64D42110979A000CD908 /* UIFrameworkExamples */,
 				0F8A64D32110979A000CD908 /* Products */,
 				2455574F70C590456EDA12B9 /* Pods */,
@@ -99,8 +102,8 @@
 		0FB405F32118B7B100FE1288 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F8A64DC2110979C000CD908 /* Assets.xcassets */,
 				0F8A64E12110979C000CD908 /* Info.plist */,
+				0F8A64DC2110979C000CD908 /* Assets.xcassets */,
 				0F8A64DE2110979C000CD908 /* LaunchScreen.storyboard */,
 				0FB405EE2118952800FE1288 /* nygov-logo-share.png */,
 			);
@@ -195,6 +198,7 @@
 				0FB405EF2118952800FE1288 /* nygov-logo-share.png in Resources */,
 				0F8A64E02110979C000CD908 /* LaunchScreen.storyboard in Resources */,
 				0F8A64DD2110979C000CD908 /* Assets.xcassets in Resources */,
+				0FB405F62118B99200FE1288 /* Default-568h@2x.png in Resources */,
 				0F8A64DB2110979A000CD908 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4MBKS75K;
-				INFOPLIST_FILE = UIFrameworkExamples/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UIFrameworkExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8N4MBKS75K;
-				INFOPLIST_FILE = UIFrameworkExamples/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UIFrameworkExamples/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import SkyFloatingLabelTextField
+import SwiftyJSON
 
 
 /*
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //  getData()
-      //  getRequest()
+        getRequest()
         /*
          Example of using the SKYFloatingLabelTextField. Need to prorgammmatically add elements.
          Can change the color. 
@@ -57,9 +58,11 @@ class ViewController: UIViewController {
             , error) in
             guard let data = data else { return }
             do {
-                let decoder = JSONDecoder()
-                let lawyerData = try decoder.decode(Lawyer.self, from: data)
-                print(lawyerData.first_name ?? "blank")
+                let json = JSON(data)
+                
+                //let decoder = JSONDecoder()
+                //let lawyerData = try decoder.decode(Lawyer.self, from: data)
+                print(json[0])
                 
             } catch let err {
                 print("Err", err)

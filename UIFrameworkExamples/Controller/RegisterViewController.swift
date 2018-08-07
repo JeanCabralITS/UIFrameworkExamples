@@ -15,6 +15,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
      let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]
     
     @IBAction func registerButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "goToLawyer", sender: self)
     }
     
     override func viewDidLoad() {
@@ -22,20 +24,25 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: colors)
         
-        let nameTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 75, width: 200, height: 30))
-        let passwordTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y:105 , width: 200, height: 30))
-        let streetAddressTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 135, width: 200, height: 30))
-        let cityTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 165, width: 200, height: 30))
-        let stateTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 195, width: 200, height: 30))
-        let emailTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 225, width: 200, height: 30))
+        let nameTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 75, width: 200, height: 35))
+        let passwordTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y:115 , width: 200, height: 35))
+        let streetAddressTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 155, width: 200, height: 35))
+        let cityTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 205, width: 200, height: 35))
+        let stateTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 245, width: 200, height: 35))
+        let emailTextField = SkyFloatingLabelTextField(frame: CGRect(x: 0, y: 285, width: 200, height: 35))
         
         nameTextField.placeholder = "Name"
         nameTextField.title = "Enter Your Name"
-        nameTextField.tintColor = UIColor.flatLime()
+        nameTextField.lineHeight = 0
+        nameTextField.selectedLineHeight = 0
+        //nameTextField.tintColor = UIColor.flatLime()
+        
         
         passwordTextField.placeholder = "Password"
         passwordTextField.title = "Enter Your Password"
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.lineHeight = 0
+        passwordTextField.selectedLineHeight = 0
         
         streetAddressTextField.placeholder = "Address"
         streetAddressTextField.title = "Enter Your Address"
@@ -55,6 +62,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         emailTextField.placeholder = "Email"
         emailTextField.title = "Email Address"
+        emailTextField.lineHeight = 0
+        emailTextField.selectedLineHeight = 0
         emailTextField.errorColor = UIColor.red
         emailTextField.delegate = self
         

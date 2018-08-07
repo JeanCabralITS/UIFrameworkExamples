@@ -21,13 +21,23 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var register: UIButton!
     @IBOutlet weak var logIn: UIButton!
-    
     @IBOutlet weak var imageView: UIImageView!
+    
+    
+    let lawyerURL = "https://data.ny.gov/resource/cdhq-buk7.json"
+    let questionMark = "?"
+    var query = "="
+    var paramaterToSearch = "" // Takes on the name of one of the Lawyer's properties to search
+    
+    var namesArray:[String] = []
+    
+    
+    // Response is lawyerURL + questoinMark + query + paramaterToSearch
     
     override func viewDidLoad() {
         super.viewDidLoad()
       //  getData()
-        getRequest()
+        //getRequest()
         /*
          Example of using the SKYFloatingLabelTextField. Need to prorgammmatically add elements.
          Can change the color. 
@@ -52,24 +62,7 @@ class WelcomeViewController: UIViewController {
     }
 
    // GET REQUEST -->
-    func getRequest(){
-        guard let lawyerUrl = URL(string: "https://data.ny.gov/resource/cdhq-buk7.json?first_name=YUKI") else { return }// After the question mark u can change the property you are looking for.
-        
-        URLSession.shared.dataTask(with: lawyerUrl) { (data, response
-            , error) in
-            guard let data = data else { return }
-            do {
-                let json = JSON(data)
-                
-                //let decoder = JSONDecoder()
-                //let lawyerData = try decoder.decode(Lawyer.self, from: data)
-                print(json[0])
-                
-            } catch let err {
-                print("Err", err)
-            }
-            }.resume()
-    }
+  
     
     
     func parseJSON(){

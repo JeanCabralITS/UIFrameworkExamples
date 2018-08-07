@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHL-xa-Btd">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.6470588235294118" green="0.6588235294117647" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,7 +100,7 @@
                         <constraints>
                             <constraint firstItem="BHL-xa-Btd" firstAttribute="leading" secondItem="IG6-Q3-8dI" secondAttribute="leading" id="3S0-Bg-KZr"/>
                             <constraint firstItem="BHL-xa-Btd" firstAttribute="bottom" secondItem="aMj-VU-kqO" secondAttribute="bottom" id="6z4-cR-ur5"/>
-                            <constraint firstItem="BHL-xa-Btd" firstAttribute="top" secondItem="aMj-VU-kqO" secondAttribute="top" constant="543" id="jgf-24-jgZ"/>
+                            <constraint firstItem="BHL-xa-Btd" firstAttribute="top" secondItem="aMj-VU-kqO" secondAttribute="top" constant="558" id="jgf-24-jgZ"/>
                             <constraint firstAttribute="trailing" secondItem="BHL-xa-Btd" secondAttribute="trailing" id="yIr-mI-Fsd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aMj-VU-kqO"/>
@@ -117,7 +117,7 @@
         <!--Lawyer-->
         <scene sceneID="4bM-GE-7b2">
             <objects>
-                <tableViewController id="1NJ-Gb-Owp" sceneMemberID="viewController">
+                <tableViewController id="1NJ-Gb-Owp" customClass="LawyerViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rRq-cv-5No">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,18 +154,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDP-VM-wuf">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.6470588235294118" green="0.6588235294117647" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInPressed:" destination="ttk-ei-Q28" eventType="touchUpInside" id="5Bh-wa-ZN8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDP-VM-wuf" firstAttribute="bottom" secondItem="r3z-Pm-nMS" secondAttribute="bottom" id="6TW-9t-xmp"/>
                             <constraint firstAttribute="trailing" secondItem="vDP-VM-wuf" secondAttribute="trailing" id="OpI-Ah-vcx"/>
-                            <constraint firstItem="vDP-VM-wuf" firstAttribute="top" secondItem="r3z-Pm-nMS" secondAttribute="top" constant="543" id="mYk-vH-7Tg"/>
+                            <constraint firstItem="vDP-VM-wuf" firstAttribute="top" secondItem="r3z-Pm-nMS" secondAttribute="top" constant="558" id="mYk-vH-7Tg"/>
                             <constraint firstItem="vDP-VM-wuf" firstAttribute="leading" secondItem="5FF-Re-GEr" secondAttribute="leading" id="mim-O4-Fna"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r3z-Pm-nMS"/>
@@ -207,6 +210,6 @@
         <image name="nygov-logo-share.png" width="3300" height="2700"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T6R-2b-lY2"/>
+        <segue reference="IBr-qi-OeZ"/>
     </inferredMetricsTieBreakers>
 </document>

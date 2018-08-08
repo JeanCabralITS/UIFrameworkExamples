@@ -166,10 +166,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vDP-VM-wuf" firstAttribute="bottom" secondItem="r3z-Pm-nMS" secondAttribute="bottom" id="6TW-9t-xmp"/>
-                            <constraint firstAttribute="trailing" secondItem="vDP-VM-wuf" secondAttribute="trailing" id="OpI-Ah-vcx"/>
-                            <constraint firstItem="vDP-VM-wuf" firstAttribute="top" secondItem="r3z-Pm-nMS" secondAttribute="top" constant="558" id="mYk-vH-7Tg"/>
-                            <constraint firstItem="vDP-VM-wuf" firstAttribute="leading" secondItem="5FF-Re-GEr" secondAttribute="leading" id="mim-O4-Fna"/>
+                            <constraint firstItem="vDP-VM-wuf" firstAttribute="top" secondItem="r3z-Pm-nMS" secondAttribute="top" constant="558" id="BqN-Vd-1Co"/>
+                            <constraint firstItem="vDP-VM-wuf" firstAttribute="bottom" secondItem="r3z-Pm-nMS" secondAttribute="bottom" id="GmT-E0-55R"/>
+                            <constraint firstItem="vDP-VM-wuf" firstAttribute="leading" secondItem="5FF-Re-GEr" secondAttribute="leading" id="kwa-TT-37z"/>
+                            <constraint firstAttribute="trailing" secondItem="vDP-VM-wuf" secondAttribute="trailing" id="sQg-ol-OKa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r3z-Pm-nMS"/>
                     </view>
@@ -210,6 +210,6 @@
         <image name="nygov-logo-share.png" width="3300" height="2700"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IBr-qi-OeZ"/>
+        <segue reference="Br1-48-ig0"/>
     </inferredMetricsTieBreakers>
 </document>

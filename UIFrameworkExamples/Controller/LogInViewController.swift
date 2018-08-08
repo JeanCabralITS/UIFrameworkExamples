@@ -30,7 +30,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var passwordTextField :SkyFloatingLabelTextFieldWithIcon = {
         var pwTextField = SkyFloatingLabelTextFieldWithIcon()
-        pwTextField.iconFont = UIFont(name: "fontawesome", size: 15)
+        pwTextField.iconFont = UIFont(name: "fontawesome", size: 18)
         pwTextField.iconText = "\u{f023}"
         pwTextField.title = "Enter a Password"
         pwTextField.placeholder = "Password"
@@ -63,14 +63,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
         emailTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        emailTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 300).isActive = true
-        emailTextField.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        emailTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200).isActive = true
+        emailTextField.widthAnchor.constraint(equalToConstant: 175).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        passwordTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 350).isActive = true
-        passwordTextField.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 250).isActive = true
+        passwordTextField.widthAnchor.constraint(equalToConstant: 175).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
     }

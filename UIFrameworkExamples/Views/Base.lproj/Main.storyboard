@@ -191,6 +191,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.73333333333333328" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -210,6 +211,6 @@
         <image name="nygov-logo-share.png" width="3300" height="2700"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Br1-48-ig0"/>
+        <segue reference="T6R-2b-lY2"/>
     </inferredMetricsTieBreakers>
 </document>

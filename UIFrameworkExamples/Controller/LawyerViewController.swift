@@ -8,62 +8,61 @@
 
 import UIKit
 import SwiftyJSON
+import ChameleonFramework
+import SVProgressHUD
+
 
 class LawyerViewController: UITableViewController {
 
+//MARK: Properties
     var lawyerArray = [Lawyer]()
     
+//MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRequest()
+        fetchJSON()
     }
 
-    //MARK: JSON
-    
-    func getRequest(){
-        guard let lawyerUrl = URL(string: "https://data.ny.gov/resource/cdhq-buk7.json?first_name=YUKI") else { return }// After the question mark u can change the property you are looking for.
-        
+//MARK: Get The JSON
+    fileprivate func fetchJSON(){
+        guard let lawyerUrl = URL(string: "https://data.ny.gov/resource/cdhq-buk7.json?first_name=YUKI") else { return }
         URLSession.shared.dataTask(with: lawyerUrl) { (data, response
             , error) in
+            DispatchQueue.main.async{
+                
             guard let data = data else { return }
             do {
-                let json = JSON(data)
-                
-                // Iterate through elements and check if the law school == NYU.
-                for names in 0...json.count{
-                    if json[names]["law_school"] == "NEW YORK UNIVERSITY"{
-                        self.lawyerArray.append(json[0].object as! Lawyer)
-                    }
-                    
-                }
-                //let decoder = JSONDecoder()
-                //let lawyerData = try decoder.decode(Lawyer.self, from: data)
-                print(json[0])
-                print(self.lawyerArray)
-                
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                self.lawyerArray = try decoder.decode([Lawyer].self, from: data)
+                print(self.lawyerArray)// Debug and check if data was added to Lawyer Array
+                SVProgressHUD.show()
+                self.tableView.reloadData()
+                SVProgressHUD.dismiss()
             } catch let err {
                 print("Err", err)
+                }
+                
             }
-            }.resume()
+        }.resume()
+        
     }
     
-    
-    //MARK: Tableview Data Source
+//MARK: Tableview Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return lawyerArray.count
     }
     
-    
-    //MARK: Table Delegate Methods
+//MARK: Table Delegate Methods
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        
-        cell.textLabel?.text = lawyerArray[indexPath.row].first_name
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as UITableViewCell
+        let lawyer = lawyerArray[indexPath.row]
+        cell.textLabel?.text = lawyer.firstName ?? "??"
         return cell
     }
+    
     
 //    
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

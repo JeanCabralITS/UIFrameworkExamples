@@ -21,8 +21,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         var mailTextField = SkyFloatingLabelTextFieldWithIcon()
         mailTextField.iconFont = UIFont(name: "fontawesome", size: 15)
         mailTextField.iconText = "\u{f0e0}"
+        mailTextField.selectedIconColor = #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.3411764706, alpha: 1)
         mailTextField.placeholder = "Email"
         mailTextField.title = "Please Enter Your Email"
+        mailTextField.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         mailTextField.lineHeight = 0
         mailTextField.selectedLineHeight = 0
         return mailTextField
@@ -34,6 +36,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         pwTextField.iconText = "\u{f023}"
         pwTextField.title = "Enter a Password"
         pwTextField.placeholder = "Password"
+        pwTextField.selectedIconColor = #colorLiteral(red: 0.9725490196, green: 0.7333333333, blue: 0.3411764706, alpha: 1)
         pwTextField.isSecureTextEntry = true
         pwTextField.lineHeight = 0
         pwTextField.selectedLineHeight = 0

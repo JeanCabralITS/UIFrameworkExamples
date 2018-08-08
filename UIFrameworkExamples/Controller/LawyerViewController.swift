@@ -51,15 +51,19 @@ class LawyerViewController: UITableViewController {
 //MARK: Tableview Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lawyerArray.count
     }
     
 //MARK: Table Delegate Methods
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LawyerCell", for: indexPath) as UITableViewCell
         let lawyer = lawyerArray[indexPath.row]
-        cell.textLabel?.text = lawyer.firstName ?? "??"
+        cell.textLabel?.text = lawyer.lastName ?? "??"
         return cell
     }
     

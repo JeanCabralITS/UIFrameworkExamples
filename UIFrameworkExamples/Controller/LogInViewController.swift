@@ -10,12 +10,37 @@ import UIKit
 import ChameleonFramework
 import SkyFloatingLabelTextField
 
+
 class LogInViewController: UIViewController, UITextFieldDelegate {
 
-    //MARK: 
+    //MARK:Properties
+    
     let colors:[UIColor] = [UIColor.flatPlumColorDark(), UIColor.flatNavyBlue()]
     
+    var emailTextField : SkyFloatingLabelTextFieldWithIcon = {
+        var mailTextField = SkyFloatingLabelTextFieldWithIcon()
+        mailTextField.iconFont = UIFont(name: "fontawesome", size: 15)
+        mailTextField.iconText = "\u{f0e0}"
+        mailTextField.placeholder = "Email"
+        mailTextField.title = "Please Enter Your Email"
+        mailTextField.lineHeight = 0
+        mailTextField.selectedLineHeight = 0
+        return mailTextField
+    }()
     
+    var passwordTextField :SkyFloatingLabelTextFieldWithIcon = {
+        var pwTextField = SkyFloatingLabelTextFieldWithIcon()
+        pwTextField.iconFont = UIFont(name: "fontawesome", size: 15)
+        pwTextField.iconText = "\u{f023}"
+        pwTextField.title = "Enter a Password"
+        pwTextField.placeholder = "Password"
+        pwTextField.isSecureTextEntry = true
+        pwTextField.lineHeight = 0
+        pwTextField.selectedLineHeight = 0
+        return pwTextField
+    }()
+    
+    //MARK: LOG IN Pressed
     @IBAction func logInPressed(_ sender: UIButton) {
         
         self.performSegue(withIdentifier: "goToLawyer", sender: self)
@@ -26,35 +51,32 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.frame, andColors: colors)
-        let mailTextField = SkyFloatingLabelTextField(frame: CGRect(x: self.view.frame.maxX / 4, y: self.view.frame.maxY/8, width: 200, height: 60))
-        let passwordTextField = SkyFloatingLabelTextField(frame: CGRect(x: self.view.frame.maxX / 4, y: self.view.frame.maxY/4, width: 200, height: 60))
-        mailTextField.placeholder = "Email"
-        mailTextField.title = "Enter Your Email "
-        mailTextField.delegate = self
-        
-        passwordTextField.placeholder = "Password"
-        passwordTextField.title = "Enter Your Password"
-        passwordTextField.isSecureTextEntry = true
-        mailTextField.lineHeight = 0
-        mailTextField.selectedLineHeight = 0
-        passwordTextField.lineHeight = 0
-        passwordTextField.selectedLineHeight = 0
-    
-        
-        
+        emailTextField.delegate = self
         self.view.addSubview(passwordTextField)
-        self.view.addSubview(mailTextField)
+        self.view.addSubview(emailTextField)
+        layoutSubviews()
+  
+    }
+    
+    //MARK: AutoLayout
+    func layoutSubviews(){
         
-        // Do any additional setup after loading the view.
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
+        emailTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        emailTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 300).isActive = true
+        emailTextField.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        emailTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 350).isActive = true
+        passwordTextField.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
     }
     
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //MARK: Textfield Delegate Method
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text {
             if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
@@ -71,14 +93,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

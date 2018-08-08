@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F241CD6211A120100A24B5F /* LawyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F241CD5211A120100A24B5F /* LawyerViewController.swift */; };
+		0F299969211B3EAD004750C5 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F299968211B3E99004750C5 /* fontawesome-webfont.ttf */; };
 		0F42B001211494A80064B6D6 /* Lawyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F42B000211494A80064B6D6 /* Lawyer.swift */; };
 		0F8A64D62110979A000CD908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8A64D52110979A000CD908 /* AppDelegate.swift */; };
 		0F8A64D82110979A000CD908 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8A64D72110979A000CD908 /* ViewController.swift */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		0F241CD5211A120100A24B5F /* LawyerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerViewController.swift; sourceTree = "<group>"; };
+		0F299965211B3E78004750C5 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "../../../../../../Downloads/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		0F299968211B3E99004750C5 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		0F42B000211494A80064B6D6 /* Lawyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lawyer.swift; sourceTree = "<group>"; };
 		0F8A64D22110979A000CD908 /* UIFrameworkExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIFrameworkExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8A64D52110979A000CD908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F299967211B3E8B004750C5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F299968211B3E99004750C5 /* fontawesome-webfont.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		0F8A64C92110979A000CD908 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +89,7 @@
 				0FB405F12118B77800FE1288 /* Controller */,
 				0FB405F22118B78300FE1288 /* Model */,
 				0FB405F42118B7D800FE1288 /* Views */,
+				0F299967211B3E8B004750C5 /* fonts */,
 				0FB405F32118B7B100FE1288 /* Supporting Files */,
 			);
 			path = UIFrameworkExamples;
@@ -109,6 +121,7 @@
 				0F8A64DC2110979C000CD908 /* Assets.xcassets */,
 				0F8A64DE2110979C000CD908 /* LaunchScreen.storyboard */,
 				0FB405EE2118952800FE1288 /* nygov-logo-share.png */,
+				0F299965211B3E78004750C5 /* fontawesome-webfont.ttf */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			files = (
 				0FB405EF2118952800FE1288 /* nygov-logo-share.png in Resources */,
 				0F8A64E02110979C000CD908 /* LaunchScreen.storyboard in Resources */,
+				0F299969211B3EAD004750C5 /* fontawesome-webfont.ttf in Resources */,
 				0F8A64DD2110979C000CD908 /* Assets.xcassets in Resources */,
 				0FB405F62118B99200FE1288 /* Default-568h@2x.png in Resources */,
 				0F8A64DB2110979A000CD908 /* Main.storyboard in Resources */,

@@ -32,7 +32,7 @@ class LawyerViewController: UITableViewController {
                 // Iterate through elements and check if the law school == NYU.
                 for names in 0...json.count{
                     if json[names]["law_school"] == "NEW YORK UNIVERSITY"{
-                        self.lawyerArray.append(json[].object as! Lawyer)
+                        self.lawyerArray.append(json[0].object as! Lawyer)
                     }
                     
                 }

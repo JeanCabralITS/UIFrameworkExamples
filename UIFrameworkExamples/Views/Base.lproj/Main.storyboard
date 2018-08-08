@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-28" y="20.239880059970016"/>
         </scene>
-        <!--Register-->
+        <!--Register View Controller-->
         <scene sceneID="zpG-PJ-eLf">
             <objects>
                 <viewController storyboardIdentifier="registrationVC" id="IyA-zq-r5u" customClass="RegisterViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aMj-VU-kqO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Register" id="hOe-tO-uj9"/>
+                    <navigationItem key="navigationItem" id="hOe-tO-uj9"/>
                     <connections>
                         <segue destination="1NJ-Gb-Owp" kind="show" identifier="goToLawyer" id="IBr-qi-OeZ"/>
                     </connections>
@@ -145,7 +145,7 @@
             </objects>
             <point key="canvasLocation" x="2089" y="-56"/>
         </scene>
-        <!--Log In-->
+        <!--Log In View Controller-->
         <scene sceneID="8pt-o9-rad">
             <objects>
                 <viewController storyboardIdentifier="loginVC" id="ttk-ei-Q28" customClass="LogInViewController" customModule="UIFrameworkExamples" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,7 +173,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r3z-Pm-nMS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Log In" id="N8y-pY-78U"/>
+                    <navigationItem key="navigationItem" id="N8y-pY-78U"/>
                     <connections>
                         <segue destination="1NJ-Gb-Owp" kind="show" identifier="goToLawyer" id="Br1-48-ig0"/>
                     </connections>
